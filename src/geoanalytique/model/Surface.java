@@ -1,4 +1,7 @@
 package geoanalytique.model;
 
-public abstract class Surface extends GeoObject{
+import java.util.List;
+
+public abstract class Surface extends GeoObject {
+    protected List<Point> points;
 }

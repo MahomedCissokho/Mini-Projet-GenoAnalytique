@@ -1,4 +1,9 @@
 package geoanalytique.model;
 
-public class Droite extends GeoObject{
+import java.util.List;
+
+public class Droite extends GeoObject {
+    protected float ordonnee_origine ;
+    protected float coefficient_directeur;
+    protected List<Point> points ;
 }
