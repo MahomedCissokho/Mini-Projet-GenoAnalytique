@@ -3,7 +3,7 @@ package geoanalytique.model;
 /**
  * Représente un rectangle dans un plan cartésien.
  * Un rectangle est défini par sa longueur et sa largeur.
- * @author Abdallah Victor Assolofo Aicha
+ * @author Abdallah Solofo Victor Aicha
  * @author Nana Cathy Aidara
  * @author Mohamed Cissoko
  * @author Fatimata Tidiane Dia
