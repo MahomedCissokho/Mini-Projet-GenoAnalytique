@@ -1,0 +1,106 @@
+package geoanalytique.model.geoobject.operation;
+
+import geoanalytique.model.Ellipse;
+import geoanalytique.util.Operation;
+
+/**
+ * La classe OperationEllipse contient les méthodes spécifiques aux opérations sur les ellipses.
+ * Elle implémente l'interface Operation pour définir les opérations disponibles sur une ellipse.
+ * 
+ * Cette classe est utilisée pour effectuer des opérations sur les ellipses géométriques.
+ * 
+ * @author Abdallah Solofo Victor AICHA, Nana Katy AIDARA, Mahomed CISSOKHO,
+ *         Fatima Tidiane DIA, Bassirou KANE
+ */
+public class OperationEllipse implements Operation {
+    private Ellipse ellipse;
+
+    /**
+     * Constructeur de la classe OperationEllipse.
+     * Il initialise l'objet OperationEllipse avec l'ellipse donnée en paramètre.
+     * 
+     * @param ellipse L'ellipse sur laquelle les opérations seront effectuées.
+     */
+    public OperationEllipse(Ellipse ellipse) {
+        this.ellipse = ellipse;
+    }
+
+    /**
+     * Méthode pour calculer le périmètre de l'ellipse.
+     * 
+     * @return Le périmètre de l'ellipse.
+     */
+    public double calculerPerimetre() {
+        double a = ellipse.getDemiGrandAxe();
+        double b = ellipse.getDemiPetitAxe();
+        return Math.PI * (3 * (a + b) - Math.sqrt((3 * a + b) * (a + 3 * b)));
+    }
+
+    /**
+     * Méthode pour calculer l'aire de l'ellipse.
+     * 
+     * @return L'aire de l'ellipse.
+     */
+    public double calculerSurface() {
+        double a = ellipse.getDemiGrandAxe();
+        double b = ellipse.getDemiPetitAxe();
+        return Math.PI * a * b;
+    }
+     /**
+     * Cette methode renvoie le nom de l'operation 
+     * @return "OperationEllipse"
+     */
+    
+     public String getTitle() {
+        return "OperationEllipse";
+    }
+
+    /**
+     * Cette methode renvoie le nombre d'attributs de la classe
+     * @return 1
+     */
+    public int getArite() {
+        return 1;
+    }
+
+    /**
+     * Cette methode permet de changer l'attribut Ellipse.
+     * @param num de type object
+     * @param o de type object
+     */
+    public void setArgument(int num, Object o) {
+        if (num == 1 && o instanceof Ellipse) {
+            this.Ellipse = (Ellipse) o;
+        }
+        
+    }
+
+    /**
+     * Cette methode permet de retourner le nom de l'attribut
+     * @return "le nom de l'attribut"
+     */
+    public String getDescriptionArgument(int num) {
+        if (num == 1)
+            return "Ellipse";
+
+        else return "";
+
+    }
+    /**
+     * Cette methode permet de retourner la classe de l'attribut
+     * @param num de type int
+     * @return "La classe de l'attribut"
+     */
+
+    public class<?> getClassArgument(int num) {
+        if (num == 1)
+            return Ellipse.Class;
+    }
+
+    /**
+     * Cette methode permet de...
+     */
+    public Object calculer(){
+
+    }
+}

@@ -1,0 +1,114 @@
+package geoanalytique.model.geoobject.operation;
+
+import geoanalytique.model.TriangleEquilateral;
+import geoanalytique.util.Operation;
+
+/**
+ * La classe OperationTriangleEquilateral contient les méthodes spécifiques aux opérations sur les triangles équilatéraux.
+ * Elle permet de vérifier si tous les côtés sont de longueurs égales, de calculer la hauteur du triangle et de calculer le rayon du cercle circonscrit.
+ * 
+ * @author Abdallah Solofo Victor AICHA, Nana Katy AIDARA, Mahomed CISSOKHO,
+ *         Fatima Tidiane DIA, Bassirou KANE
+ */
+public class OperationTriangleEquilateral {
+    private TriangleEquilateral triangle;
+
+    /**
+     * Constructeur de la classe OperationTriangleEquilateral.
+     * Il initialise l'objet OperationTriangleEquilateral avec le triangle équilatéral donné en paramètre.
+     * 
+     * @param triangle Le triangle équilatéral sur lequel les opérations seront effectuées.
+     */
+    public OperationTriangleEquilateral(TriangleEquilateral triangle) {
+        this.triangle = triangle;
+    }
+
+    /**
+     * Méthode pour vérifier si tous les côtés du triangle sont de longueurs égales.
+     * 
+     * @return true si tous les côtés sont égaux, sinon false.
+     */
+    public boolean verifierEquilateral() {
+        double a = triangle.getCote1();
+        double b = triangle.getCote2();
+        double c = triangle.getCote3();
+        return a == b && b == c;
+    }
+
+    /**
+     * Méthode pour calculer la hauteur du triangle équilatéral depuis n'importe quel côté.
+     * 
+     * @param cote La longueur d'un côté du triangle.
+     * @return La hauteur du triangle.
+     */
+    public double calculerHauteur(double cote) {
+        return Math.sqrt(3) / 2 * cote;
+    }
+
+    /**
+     * Méthode pour calculer le rayon du cercle circonscrit au triangle équilatéral.
+     * 
+     * @return Le rayon du cercle circonscrit.
+     */
+    public double calculerRayonCercleCirconscrit() {
+        double cote = triangle.getCote1(); // On prend n'importe quel côté car ils sont tous égaux
+        return cote / Math.sqrt(3);
+    }
+     /**
+     * Cette methode renvoie le nom de l'operation 
+     * @return "OperationTriangleEquilateral"
+     */
+    
+     public String getTitle() {
+        return "OperationTriangleEquilateral";
+    }
+
+    /**
+     * Cette methode renvoie le nombre d'attributs de la classe
+     * @return 3
+     */
+    public int getArite() {
+        return 3;
+    }
+
+    /**
+     * Cette methode permet de changer l'attribut TriangleEquilateral.
+     * @param num de type object
+     * @param o de type object
+     */
+    public void setArgument(int num, Object o) {
+        if (num == 3 && o instanceof TriangleEquilateral) {
+            this.TriangleEquilateral = (TriangleEquilateral) o;
+        }
+        
+    }
+
+    /**
+     * Cette methode permet de retourner le nom de l'attribut
+     * @return "le nom de l'attribut"
+     */
+    public String getDescriptionArgument(int num) {
+        if (num == 3)
+            return "TriangleEquilateral";
+
+        else return "";
+
+    }
+    /**
+     * Cette methode permet de retourner la classe de l'attribut
+     * @param num de type int
+     * @return "La classe de l'attribut"
+     */
+
+    public class<?> getClassArgument(int num) {
+        if (num == 3)
+            return TriangleEquilateral.Class;
+    }
+
+    /**
+     * Cette methode permet de...
+     */
+    public Object calculer(){
+
+    }
+}

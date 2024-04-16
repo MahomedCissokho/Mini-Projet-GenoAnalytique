@@ -1,0 +1,134 @@
+package geoanalytique.model.geoobject.operation;
+
+import geoanalytique.model.Droite;
+import geoanalytique.model.Point;
+import geoanalytique.util.Operation;
+
+/**
+ * La classe Droite représente une droite dans un espace à deux dimensions 
+ * définie par son équation ax + b = 0.
+ * Les coefficients (a, b) sont calculés à partir des coordonnées de deux points sur la droite.
+ * La forme de l'équation de la droite est y = ax + b.
+ * 
+ * Cette classe est utilisée pour effectuer des opérations sur les droites géométriques.
+ * 
+ * @author Abdallah Solofo Victor AICHA, Nana Katy AIDARA, Mahomed CISSOKHO,
+ *         Fatima Tidiane DIA, Bassirou KANE
+ */
+public class Droite {
+    private float a; // Coefficient directeur
+    private float b; // Ordonnée à l'origine
+
+    /**
+     * Constructeur de la classe Droite à partir de deux points.
+     * 
+     * @param x1 Coordonnée x du premier point.
+     * @param y1 Coordonnée y du premier point.
+     * @param x2 Coordonnée x du deuxième point.
+     * @param y2 Coordonnée y du deuxième point.
+     */
+    public Droite(float x1, float y1, float x2, float y2) {
+        // Calcul du coefficient directeur
+        a = (y2 - y1) / (x2 - x1);
+        // Calcul de l'ordonnée à l'origine
+        b = -a * x1 + y1;
+    }
+
+    /**
+     * Obtient le coefficient directeur de la droite.
+     * 
+     * @return Le coefficient directeur de la droite.
+     */
+    public float getCoefficientDirecteur() {
+        return a;
+    }
+
+    /**
+     * Obtient l'ordonnée à l'origine de la droite.
+     * 
+     * @return L'ordonnée à l'origine de la droite.
+     */
+    public float getOrdonneeOrigine() {
+        return b;
+    }
+
+    /**
+     * Représentation textuelle de l'équation de la droite.
+     * 
+     * @return L'équation de la droite sous forme textuelle.
+     */
+    public String getEquation() {
+
+        return "y = " + a + "x + " + b;
+    }
+
+    /**
+     * Méthode pour vérifier si cette droite est parallèle à une autre droite donnée.
+     * 
+     * @param autreDroite La droite avec laquelle vérifier la parallélisme.
+     * @return true si les droites sont parallèles, false sinon.
+     */
+    public boolean verifierParallele(Droite autreDroite) {
+        // Vérification de la parallélisme en comparant les coefficients directeurs
+        return this.droite.getCoefficientDirecteur() == autreDroite.getCoefficientDirecteur();
+    }
+     /**
+     * Cette methode renvoie le nom de l'operation 
+     * @return "OperationDroite"
+     */
+    
+     public String getTitle() {
+        return "OperationDroite";
+    }
+
+    /**
+     * Cette methode renvoie le nombre d'attributs de la classe
+     * @return 2
+     */
+    public int getArite() {
+        return 2;
+    }
+
+    /**
+     * Cette methode permet de changer l'attribut Droite.
+     * @param num de type object
+     * @param o de type object
+     */
+    public void setArgument(int num, Object o) {
+        if (num == 2 && o instanceof Droite){
+            Droite s=(Droite) o ;
+            this.point.setAbscisse(p.getAbscisse());
+            this.point.setOrdonnee(p.getOrdonnee());
+        }
+        
+    }
+
+    /**
+     * Cette methode permet de retourner le nom de l'attribut
+     * @return "le nom de l'attribut"
+     */
+    public String getDescriptionArgument(int num) {
+        if (num == 2)
+            return "Droite";
+
+        else return "";
+
+    }
+    /**
+     * Cette methode permet de retourner la classe de l'attribut
+     * @param num de type int
+     * @return "La classe de l'attribut"
+     */
+
+    public class<?> getClassArgument(int num) {
+        if (num == 1)
+            return Droite.Class;
+    }
+
+    /**
+     * Cette methode permet de...
+     */
+    public Object calculer(){
+
+    }
+}

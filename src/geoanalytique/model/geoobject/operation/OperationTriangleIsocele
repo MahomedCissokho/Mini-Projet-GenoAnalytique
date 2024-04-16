@@ -60,5 +60,62 @@ public class TriangleIsocele {
         // Conversion en degrés
         return Math.toDegrees(angleRadian);
     }
+     /**
+     * Cette methode renvoie le nom de l'operation 
+     * @return "OperationTriangleIsocele"
+     */
+    
+     public String getTitle() {
+        return "OperationTriangleIsocele";
+    }
+
+    /**
+     * Cette methode renvoie le nombre d'attributs de la classe
+     * @return 3
+     */
+    public int getArite() {
+        return 3;
+    }
+
+    /**
+     * Cette methode permet de changer l'attribut TriangleIsocele.
+     * @param num de type object
+     * @param o de type object
+     */
+    public void setArgument(int num, Object o) {
+        if (num == 3 && o instanceof TriangleIsocele) {
+            this.TriangleIsocele = (TriangleIsocele) o;
+        }
+        
+    }
+
+    /**
+     * Cette methode permet de retourner le nom de l'attribut
+     * @return "le nom de l'attribut"
+     */
+    public String getDescriptionArgument(int num) {
+        if (num == 3)
+            return "TriangleIsocele";
+
+        else return "";
+
+    }
+    /**
+     * Cette methode permet de retourner la classe de l'attribut
+     * @param num de type int
+     * @return "La classe de l'attribut"
+     */
+
+    public class<?> getClassArgument(int num) {
+        if (num == 3)
+            return TriangleIsocele.Class;
+    }
+
+    /**
+     * Cette methode permet de...
+     */
+    public Object calculer(){
+
+    }
 
 }

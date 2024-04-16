@@ -1,0 +1,126 @@
+package geoanalytique.model.geoobject.operation;
+
+import geoanalytique.model.TriangleTriangleRectangle;
+import geoanalytique.model.Point;
+import geoanalytique.util.Operation;
+
+/**
+ * La classe OperationTriangleTriangleRectangle contient les méthodes spécifiques aux opérations sur les triangles TriangleRectangles.
+ * Elle permet de vérifier si le triangle est TriangleRectangle, de calculer l'hypoténuse et la longueur de la ligne perpendiculaire depuis l'angle droit à l'hypoténuse.
+ * 
+ * @author Abdallah Solofo Victor AICHA, Nana Katy AIDARA, Mahomed CISSOKHO,
+ *         Fatima Tidiane DIA, Bassirou KANE
+ */
+public class OperationTriangleRectangle {
+    private TriangleRectangle triangle;
+
+    /**
+     * Constructeur de la classe OperationTriangleTriangleRectangle.
+     * Il initialise l'objet OperationTriangleTriangleRectangle avec le triangle TriangleRectangle donné en paramètre.
+     * 
+     * @param triangle Le triangle TriangleRectangle sur lequel les opérations seront effectuées.
+     */
+    public OperationTriangleRectangle(TriangleRectangle triangle) {
+        this.triangle = triangle;
+    }
+
+    /**
+     * Méthode pour vérifier si le triangle est TriangleRectangle.
+     * 
+     * @return true si le triangle est TriangleRectangle, false sinon.
+     */
+    public boolean verifierTriangleRectangle() {
+        double a = triangle.getCoteA();
+        double b = triangle.getCoteB();
+        double c = triangle.getCoteC();
+        
+        // Vérifier si le triangle respecte le théorème de Pythagore
+        return (a * a + b * b == c * c) || (a * a + c * c == b * b) || (b * b + c * c == a * a);
+    }
+
+    /**
+     * Méthode pour calculer l'hypoténuse du triangle TriangleRectangle.
+     * 
+     * @return La longueur de l'hypoténuse.
+     */
+    public double calculerHypotenuse() {
+        double a = triangle.getCoteA();
+        double b = triangle.getCoteB();
+        double c = triangle.getCoteC();
+        
+        // L'hypoténuse est le côté opposé à l'angle droit, donc c'est le côté le plus long du triangle
+        return Math.max(Math.max(a, b), c);
+    }
+
+    /**
+     * Méthode pour calculer la longueur de la ligne perpendiculaire depuis l'angle droit à l'hypoténuse.
+     * 
+     * @return La longueur de la ligne perpendiculaire.
+     */
+    public double calculerPerpendiculaire() {
+        double a = triangle.getCoteA();
+        double b = triangle.getCoteB();
+        double c = triangle.getCoteC();
+        
+        // L'angle droit est opposé à l'hypoténuse, donc nous trouvons le côté opposé à l'angle droit
+        double coteOppose = (a * b) / c; // Le produit des deux côtés adjacents divisé par l'hypoténuse
+        return coteOppose;
+    }
+     /**
+     * Cette methode renvoie le nom de l'operation 
+     * @return "OperationTriangleRectangle"
+     */
+    
+     public String getTitle() {
+        return "OperationTriangleRectangle";
+    }
+
+    /**
+     * Cette methode renvoie le nombre d'attributs de la classe
+     * @return 3
+     */
+    public int getArite() {
+        return 3;
+    }
+
+    /**
+     * Cette methode permet de changer l'attribut TriangleRectangle.
+     * @param num de type object
+     * @param o de type object
+     */
+    public void setArgument(int num, Object o) {
+        if (num == 3 && o instanceof TriangleRectangle) {
+            this.TriangleRectangle = (TriangleRectangle) o;
+        }
+        
+    }
+
+    /**
+     * Cette methode permet de retourner le nom de l'attribut
+     * @return "le nom de l'attribut"
+     */
+    public String getDescriptionArgument(int num) {
+        if (num == 3)
+            return "TriangleRectangle";
+
+        else return "";
+
+    }
+    /**
+     * Cette methode permet de retourner la classe de l'attribut
+     * @param num de type int
+     * @return "La classe de l'attribut"
+     */
+
+    public class<?> getClassArgument(int num) {
+        if (num == 3)
+            return TriangleRectangle.Class;
+    }
+
+    /**
+     * Cette methode permet de...
+     */
+    public Object calculer(){
+
+    }
+}

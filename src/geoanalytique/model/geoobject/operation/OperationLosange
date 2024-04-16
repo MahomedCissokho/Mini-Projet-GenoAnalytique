@@ -1,4 +1,102 @@
- package geoanalytique.model.geoobject.operation;
+package geoanalytique.model.geoobject.operation;
 
-public class OperationLosange {
+import geoanalytique.model.Losange;
+import geoanalytique.util.Operation;
+
+/**
+ * La classe OperationLosange contient les méthodes spécifiques aux opérations sur les losanges.
+ * Elle implémente l'interface Operation pour définir les opérations disponibles sur un losange.
+ * 
+ * Cette classe est utilisée pour effectuer des opérations sur les losanges géométriques.
+ * 
+ * @author Abdallah Solofo Victor AICHA, Nana Katy AIDARA, Mahomed CISSOKHO,
+ *         Fatima Tidiane DIA, Bassirou KANE
+ */
+public class OperationLosange implements Operation {
+    private Losange losange;
+
+    /**
+     * Constructeur de la classe OperationLosange.
+     * Il initialise l'objet OperationLosange avec le losange donné en paramètre.
+     * 
+     * @param losange Le losange sur lequel les opérations seront effectuées.
+     */
+    public OperationLosange(Losange losange) {
+        this.losange = losange;
+    }
+
+    /**
+     * Méthode pour calculer le périmètre du losange.
+     * 
+     * @return Le périmètre du losange.
+     */
+    public double calculerPerimetre() {
+        return 4 * losange.getCote();
+    }
+
+    /**
+     * Méthode pour calculer la surface du losange.
+     * 
+     * @return La surface du losange.
+     */
+    public double calculerSurface() {
+        return losange.getDiagonale1() * losange.getDiagonale2() / 2;
+    }
+     /**
+     * Cette methode renvoie le nom de l'operation 
+     * @return "OperationLosange"
+     */
+    
+     public String getTitle() {
+        return "OperationLosange";
+    }
+
+    /**
+     * Cette methode renvoie le nombre d'attributs de la classe
+     * @return 1
+     */
+    public int getArite() {
+        return 1;
+    }
+
+    /**
+     * Cette methode permet de changer l'attribut Losange.
+     * @param num de type object
+     * @param o de type object
+     */
+    public void setArgument(int num, Object o) {
+        if (num == 1 && o instanceof Losange) {
+            this.Losange = (Losange) o;
+        }
+        
+    }
+
+    /**
+     * Cette methode permet de retourner le nom de l'attribut
+     * @return "le nom de l'attribut"
+     */
+    public String getDescriptionArgument(int num) {
+        if (num == 1)
+            return "Losange";
+
+        else return "";
+
+    }
+    /**
+     * Cette methode permet de retourner la classe de l'attribut
+     * @param num de type int
+     * @return "La classe de l'attribut"
+     */
+
+    public class<?> getClassArgument(int num) {
+        if (num == 1)
+            return Losange.Class;
+    }
+
+    /**
+     * Cette methode permet de...
+     */
+    public Object calculer(){
+
+    }
 }

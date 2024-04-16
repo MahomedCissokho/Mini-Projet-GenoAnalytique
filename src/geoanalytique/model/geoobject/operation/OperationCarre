@@ -1,4 +1,100 @@
 package geoanalytique.model.geoobject.operation;
 
-public class OperationLosange {
+import geoanalytique.model.Carre;
+import geoanalytique.util.Operation;
+
+/**
+ * La classe OperationCarre contient les méthodes spécifiques aux opérations sur les carrés.
+ * Elle implémente l'interface Operation pour définir les opérations disponibles sur un carré.
+ * 
+ * @author Abdallah Solofo Victor AICHA, Nana Katy AIDARA, Mahomed CISSOKHO,
+ *         Fatima Tidiane DIA, Bassirou KANE
+ */
+public class OperationCarre implements Operation {
+    private Carre carre;
+
+    /**
+     * Constructeur de la classe OperationCarre.
+     * Il initialise l'objet OperationCarre avec le carré donné en paramètre.
+     * 
+     * @param carre Le carré sur lequel les opérations seront effectuées.
+     */
+    public OperationCarre(Carre carre) {
+        this.carre = carre;
+    }
+
+    /**
+     * Méthode pour calculer l'aire du carré.
+     * 
+     * @return L'aire du carré.
+     */
+    public float calculerAire() {
+        return carre.getCote() * carre.getCote();
+    }
+
+    /**
+     * Méthode pour calculer le périmètre du carré.
+     * 
+     * @return Le périmètre du carré.
+     */
+    public float calculerPerimetre() {
+        return 4 * carre.getCote();
+    }
+     /**
+     * Cette methode renvoie le nom de l'operation 
+     * @return "OperationCarre"
+     */
+    
+     public String getTitle() {
+        return "OperationCarre";
+    }
+
+    /**
+     * Cette methode renvoie le nombre d'attributs de la classe
+     * @return 1
+     */
+    public int getArite() {
+        return 1;
+    }
+
+    /**
+     * Cette methode permet de changer l'attribut Carre.
+     * @param num de type object
+     * @param o de type object
+     */
+    public void setArgument(int num, Object o) {
+        if (num == 1 && o instanceof Carre) {
+            this.carre = (Carre) o;
+        }
+        
+    }
+
+    /**
+     * Cette methode permet de retourner le nom de l'attribut
+     * @return "le nom de l'attribut"
+     */
+    public String getDescriptionArgument(int num) {
+        if (num == 1)
+            return "carre";
+
+        else return "";
+
+    }
+    /**
+     * Cette methode permet de retourner la classe de l'attribut
+     * @param num de type int
+     * @return "La classe de l'attribut"
+     */
+
+    public class<?> getClassArgument(int num) {
+        if (num == 1)
+            return Carre.Class;
+    }
+
+    /**
+     * Cette methode permet de...
+     */
+    public Object calculer(){
+
+    }
 }

@@ -1,0 +1,117 @@
+package geoanalytique.model.geoobject.operation;
+
+import geoanalytique.model.Segment;
+import geoanalytique.model.Point;
+
+/**
+ * La classe OperationSegment contient les méthodes spécifiques aux opérations sur les segments.
+ * Elle permet de calculer la longueur et de trouver le milieu d'un segment.
+ * 
+ * @author Abdallah Solofo Victor AICHA, Nana Katy AIDARA, Mahomed CISSOKHO,
+ *         Fatima Tidiane DIA, Bassirou KANE
+ */
+public class OperationSegment {
+    public Segment segment;
+
+    /**
+     * Constructeur de la classe OperationSegment.
+     * Il initialise l'objet OperationSegment avec le segment donné en paramètre.
+     * 
+     * @param segment Le segment sur lequel les opérations seront effectuées.
+     */
+    public OperationSegment(Segment segment) {
+        this.segment = segment;
+    }
+
+    /**
+     * Méthode pour calculer la longueur du segment.
+     * 
+     * @return La longueur du segment.
+     */
+    public float calculerLongueur() {
+        Point debut = segment.getDebut();
+        Point fin = segment.getFin();
+        
+        // Calculer la distance entre les points de début et de fin
+        float distanceX = fin.getX() - debut.getX(); 
+        float distanceY = fin.getY() - debut.getY(); 
+        float longueur = Math.sqrt(distanceX * distanceX + distanceY * distanceY); 
+        
+        // Renvoyer la longueur calculée
+        return longueur;
+    }    
+    
+    public Point calculerMilieu() {
+        Point debut = segment.getDebut();
+        Point fin = segment.getFin();
+        
+        // Calculer les coordonnées moyennes
+        float milieuX = (debut.getX() + fin.getX()) / 2;
+        float milieuY = (debut.getY() + fin.getY()) / 2;
+        
+        // Créer un nouveau point pour représenter le milieu
+        Point milieu = new Point(milieuX, milieuY);
+        
+        // Renvoyer le point du milieu
+        return milieu;
+    }
+     /**
+     * Cette methode renvoie le nom de l'operation 
+     * @return "OperationSegment"
+     */
+    
+     public String getTitle() {
+        return "OperationSegment";
+    }
+
+    /**
+     * Cette methode renvoie le nombre d'attributs de la classe
+     * @return 2
+     */
+    public int getArite() {
+        return 2;
+    }
+
+    /**
+     * Cette methode permet de changer l'attribut Segment.
+     * @param num de type object
+     * @param o de type object
+     */
+    public void setArgument(int num, Object o) {
+        if (num == 2 && o instanceof Segment){
+            Segment s=(Segment) o ;
+            this.point.setAbscisse(p.getAbscisse());
+            this.point.setOrdonnee(p.getOrdonnee());
+        }
+        
+    }
+
+    /**
+     * Cette methode permet de retourner le nom de l'attribut
+     * @return "le nom de l'attribut"
+     */
+    public String getDescriptionArgument(int num) {
+        if (num == 2)
+            return "segment";
+
+        else return "";
+
+    }
+    /**
+     * Cette methode permet de retourner la classe de l'attribut
+     * @param num de type int
+     * @return "La classe de l'attribut"
+     */
+
+    public class<?> getClassArgument(int num) {
+        if (num == 1)
+            return Segment.Class;
+    }
+
+    /**
+     * Cette methode permet de...
+     */
+    public Object calculer(){
+
+    }
+}

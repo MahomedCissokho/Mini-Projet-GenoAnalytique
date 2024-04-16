@@ -1,0 +1,129 @@
+package geoanalytique.model.geoobject.operation;
+
+import geoanalytique.model.Point;
+import geoanalytique.util.Operation;
+
+/**
+ * La classe TriangleIrregulier représente un triangle irrégulier dans un espace à deux dimensions.
+ * Elle permet de calculer le périmètre du triangle en additionnant les longueurs des côtés,
+ * calculer la surface du triangle en utilisant la formule de Héron
+ * et calculer la hauteur du triangle depuis n'importe quel côté.
+ * 
+ * Cette classe est utilisée pour effectuer des opérations sur les triangles irréguliers.
+ * 
+ * @author Abdallah Solofo Victor AICHA, Nana Katy AIDARA, Mahomed CISSOKHO,
+ *         Fatima Tidiane DIA, Bassirou KANE
+ */
+public class TriangleIrregulier {
+    private Point point1;
+    private Point point2;
+    private Point point3;
+
+    /**
+     * Constructeur de la classe TriangleIrregulier à partir de trois points.
+     * 
+     * @param point1 Premier sommet du triangle.
+     * @param point2 Deuxième sommet du triangle.
+     * @param point3 Troisième sommet du triangle.
+     */
+    public TriangleIrregulier(Point point1, Point point2, Point point3) {
+        this.point1 = point1;
+        this.point2 = point2;
+        this.point3 = point3;
+    }
+
+    /**
+     * Calcule le périmètre du triangle en additionnant les longueurs des côtés.
+     * 
+     * @return Le périmètre du triangle.
+     */
+    public double calculerPerimetre() {
+        double distance12 = point1.calculerDistance(point2);
+        double distance13 = point1.calculerDistance(point3);
+        double distance23 = point2.calculerDistance(point3);
+        return distance12 + distance13 + distance23;
+    }
+
+    /**
+     * Calcule la surface du triangle en utilisant la formule de Héron.
+     * 
+     * @return La surface du triangle.
+     */
+    public double calculerSurface() {
+        double distance12 = point1.calculerDistance(point2);
+        double distance13 = point1.calculerDistance(point3);
+        double distance23 = point2.calculerDistance(point3);
+        double demiPerimetre = (distance12 + distance13 + distance23) / 2;
+        return Math.sqrt(demiPerimetre * (demiPerimetre - distance12) * (demiPerimetre - distance13) * (demiPerimetre - distance23));
+    }
+
+    /**
+     * Calcule la hauteur du triangle depuis n'importe quel côté.
+     * 
+     * @return La hauteur du triangle.
+     */
+    public double calculerHauteur() {
+        // La hauteur d'un triangle depuis n'importe quel côté est égale à 2 fois sa surface divisée par la longueur de ce côté.
+        double surface = calculerSurface();
+        double demiPerimetre = calculerPerimetre() / 2;
+        double distance12 = point1.calculerDistance(point2);
+        return 2 * surface / distance12;
+    }
+     /**
+     * Cette methode renvoie le nom de l'operation 
+     * @return "OperationTriangleIrregulier"
+     */
+    
+     public String getTitle() {
+        return "OperationTriangleIrregulier";
+    }
+
+    /**
+     * Cette methode renvoie le nombre d'attributs de la classe
+     * @return 3
+     */
+    public int getArite() {
+        return 3;
+    }
+
+    /**
+     * Cette methode permet de changer l'attribut TriangleIrregulier.
+     * @param num de type object
+     * @param o de type object
+     */
+    public void setArgument(int num, Object o) {
+        if (num == 3 && o instanceof TriangleIrregulier) {
+            this.TriangleIrregulier = (TriangleIrregulier) o;
+        }
+        
+    }
+
+    /**
+     * Cette methode permet de retourner le nom de l'attribut
+     * @return "le nom de l'attribut"
+     */
+    public String getDescriptionArgument(int num) {
+        if (num == 3)
+            return "TriangleIrregulier";
+
+        else return "";
+
+    }
+    /**
+     * Cette methode permet de retourner la classe de l'attribut
+     * @param num de type int
+     * @return "La classe de l'attribut"
+     */
+
+    public class<?> getClassArgument(int num) {
+        if (num == 3)
+            return TriangleIrregulier.Class;
+    }
+
+    /**
+     * Cette methode permet de...
+     */
+    public Object calculer(){
+
+    }
+}

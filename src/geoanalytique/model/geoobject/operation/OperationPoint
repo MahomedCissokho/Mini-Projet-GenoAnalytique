@@ -1,25 +1,27 @@
 package geoanalytique.model.geoobject.operation;
-import geoanalytique.model.Rectangle;
+
+import geoanalytique.model.Point;
 import geoanalytique.util.Operation;
 /**
- * La classe OperationRectangle contient les méthodes spécifiques aux opérations sur les rectangles.
+ * La classe Point représente un point dans un espace à deux dimensions avec des coordonnées (x, y).
+ * Elle permet de manipuler et d'effectuer des opérations sur les points.
+ * 
  * @author Abdallah Solofo Victor AICHA,Nana Katy AIDARA, Mahomed CISSOKHO, 
  * Fatima Tidiane DIA, Bassirou KANE
  */
+ 
 
 public class OperationPoint {
-    private double x;
-    private double y;
+    public Point point;
 
     /**
      * Constructeur de la classe Point.
      * 
-     * @param x La coordonnée x du point.
-     * @param y La coordonnée y du point.
+     * @param Point 
      */
-    public Point(double x, double y) {
-        this.x = x;
-        this.y = y;
+    public OperationPoint(Point point ) {
+        this.point = point;
+        
 }
 /**
      * Déplace le point selon les valeurs de déplacement données.
@@ -27,50 +29,68 @@ public class OperationPoint {
      * @param deltaX La valeur de déplacement selon l'axe x.
      * @param deltaY La valeur de déplacement selon l'axe y.
      */
-    public void deplacerPoint(double deltaX, double deltaY) {
-        this.x += deltaX;
-        this.y += deltaY;
+    public void deplacerPoint(float deltaX, float deltaY) {
+        this.point.setAbscisse += deltaX;
+        this.point.setOrdonnee += deltaY;
     }
 
     /**
-     * Calcule la distance entre ce point et un autre point donné.
-     * 
-     * @param autrePoint Le point avec lequel calculer la distance.
-     * @return La distance entre ce point et le point donné.
+     * Cette methode renvoie le nom de l'operation 
+     * @return "OperationPoint"
      */
-    public double calculerDistance(Point autrePoint) {
-        double distanceX = autrePoint.x - this.x;
-        double distanceY = autrePoint.y - this.y;
-        return Math.sqrt(distanceX * distanceX + distanceY * distanceY);
+    
+    public String getTitle() {
+        return "OperationPoint";
     }
 
     /**
-     * Trouve le milieu entre ce point et un autre point donné.
-     * 
-     * @param autrePoint Le point avec lequel trouver le milieu.
-     * @return Le point représentant le milieu entre ce point et le point donné.
+     * Cette methode renvoie le nombre d'attributs de la classe
+     * @return 1
      */
-    public Point trouverMilieu(Point autrePoint) {
-        double milieuX = (this.x + autrePoint.x) / 2;
-        double milieuY = (this.y + autrePoint.y) / 2;
-        return new Point(milieuX, milieuY);
+    public int getArite() {
+        return 1;
     }
 
     /**
-     * Obtient la coordonnée x du point.
-     * 
-     * @return La coordonnée x du point.
+     * Cette methode permet de changer l'attribut Point.
+     * @param num de type object
+     * @param o de type object
      */
-    public double getX() {
-        return x;
+    public void setArgument(int num, Object o) {
+        if (num == 1 && o instanceof Point){
+            Point p=(Point) o ;
+            this.point.setAbscisse(p.getAbscisse());
+            this.point.setOrdonnee(p.getOrdonnee());
+        }
+        
     }
 
     /**
-     * Obtient la coordonnée y du point.
-     * 
-     * @return La coordonnée y du point.
+     * Cette methode permet de retourner le nom de l'attribut
+     * @return "le nom de l'attribut"
      */
-    public double getY() {
-        return y;
+    public String getDescriptionArgument(int num) {
+        if (num == 1)
+            return "point";
+
+        else return "";
+
+    }
+    /**
+     * Cette methode permet de retourner la classe de l'attribut
+     * @param num de type int
+     * @return "La classe de l'attribut"
+     */
+
+    public class<?> getClassArgument(int num) {
+        if (num == 1)
+            return Point.Class;
+    }
+
+    /**
+     * Cette methode permet de...
+     */
+    public Object calculer(){
+
     }
 }
