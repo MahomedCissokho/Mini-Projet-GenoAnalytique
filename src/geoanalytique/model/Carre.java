@@ -5,10 +5,10 @@ package geoanalytique.model;
  * Un carré est défini par la longueur de ses côtés, tous égaux.
  * 
  * @author Abdallah Solofo Victor Aicha
- * @author Nana Cathy Aidara
- * @author Mohamed Cissoko
+ * @author Nana Katy Aidara
+ * @author Mohamed Cissokho
  * @author Fatimata Tidiane Dia
- * @author Bassirou Kane
+ * @author Bassirou Kane
  */
 public class Carre extends Rectangle {
     protected float longueur_cote;
