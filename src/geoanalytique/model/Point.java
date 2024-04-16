@@ -3,7 +3,7 @@ package geoanalytique.model;
 /**
  * Représente un point dans un plan cartésien.
  * Un point est défini par ses coordonnées (abscisse, ordonnée).
- * @author Abdallah Victor Assolofo Aicha
+ * @author Abdallah Solofo Victor Aicha
  * @author Nana Cathy Aidara
  * @author Mohamed Cissoko
  * @author Fatimata Tidiane Dia
