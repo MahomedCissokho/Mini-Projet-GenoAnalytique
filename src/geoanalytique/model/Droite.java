@@ -6,7 +6,7 @@ import java.util.List;
  * Une droite est définie par son coefficient directeur et son ordonnée à l'origine.
  * Elle peut également contenir une liste de points.
  * 
- * @author Abdallah Victor Assolofo Aicha
+ * @author Abdallah Solofo Victor Aicha
  * @author Nana Cathy Aidara
  * @author Mohamed Cissoko
  * @author Fatimata Tidiane Dia
