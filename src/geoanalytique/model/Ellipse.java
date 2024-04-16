@@ -4,10 +4,10 @@ package geoanalytique.model;
  * Une ellipse est définie par ses demi-axes et son centre.
  * 
  * @author Abdallah Solofo Victor Aicha
- * @author Nana Cathy Aidara
- * @author Mohamed Cissoko
+ * @author Nana Katy Aidara
+ * @author Mohamed Cissokho
  * @author Fatimata Tidiane Dia
- * @author Bassirou Kane
+ * @author Bassirou Kane
  */
 public class Ellipse extends Surface {
     private float demi_petit_axe;
