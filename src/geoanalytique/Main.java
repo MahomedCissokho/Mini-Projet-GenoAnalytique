@@ -1,7 +1,9 @@
 package geoanalytique;
 
-public class Main {
-    public void main (String []args){
+import javax.swing.*;
 
-    }
+import geoanalytique.gui.GeoAnalytiqueGui;
+
+public class Main {
+
 }
