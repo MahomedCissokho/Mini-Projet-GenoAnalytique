@@ -4,7 +4,7 @@ package geoanalytique.model;
  * Représente un cercle dans un plan cartésien.
  * Un cercle est défini par son rayon et son centre.
  * 
- * @author Abdallah Victor Assolofo Aicha
+ * @author Abdallah Solofo Victor Aicha
  * @author Nana Cathy Aidara
  * @author Mohamed Cissoko
  * @author Fatimata Tidiane Dia
