@@ -5,11 +5,11 @@ package geoanalytique.model;
  * Un triangle isocèle est un triangle irrégulier où deux de ses côtés ont la même longueur.
  * Il hérite de la classe TriangleIrregulier.
  * 
- * @author Abdallah Victor Assolofo Aicha
- * @author Nana Cathy Aidara
- * @author Mohamed Cissoko
+ * @author Abdallah Solofo Victor Aicha
+ * @author Nana Katy Aidara
+ * @author Mohamed Cissokho
  * @author Fatimata Tidiane Dia
- * @author Bassirou Kane
+ * @author Bassirou Kane
  */
 public class TriangleIsocele extends TriangleIrregulier {
     // Pas d'attributs supplémentaires, car les côtés de même longueur sont déjà définis dans TriangleIrregulier
