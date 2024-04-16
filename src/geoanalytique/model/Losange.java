@@ -6,10 +6,10 @@ package geoanalytique.model;
  * Il hérite de la classe Polygone.
  * 
  * @author Abdallah Solofo Victor Aicha
- * @author Nana Cathy Aidara
- * @author Mohamed Cissoko
+ * @author Nana Katy Aidara
+ * @author Mohamed Cissokho
  * @author Fatimata Tidiane Dia
- * @author Bassirou Kane
+ * @author Bassirou Kane
  */
 public class Losange extends Polygone {
     protected float longueur_cote;
