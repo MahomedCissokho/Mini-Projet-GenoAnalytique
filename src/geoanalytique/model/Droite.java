@@ -7,10 +7,10 @@ import java.util.List;
  * Elle peut également contenir une liste de points.
  * 
  * @author Abdallah Solofo Victor Aicha
- * @author Nana Cathy Aidara
- * @author Mohamed Cissoko
+ * @author Nana Katy Aidara
+ * @author Mohamed Cissokho
  * @author Fatimata Tidiane Dia
- * @author Bassirou Kane
+ * @author Bassirou Kane
  */
 public class Droite extends GeoObject{
     protected float ordonnee_origine ;
