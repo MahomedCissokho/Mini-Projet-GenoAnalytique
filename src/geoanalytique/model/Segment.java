@@ -5,9 +5,9 @@ package geoanalytique.model;
  * Un segment est défini par ses deux extrémités.
  * Il hérite de la classe Droite.
  * 
- * @author Abdallah Victor Assolofo Aicha
- * @author Nana Cathy Aidara
- * @author Mohamed Cissoko
+ * @author Abdallah Solofo Victor Aicha
+ * @author Nana Katy Aidara
+ * @author Mohamed Cissokho
  * @author Fatimata Tidiane Dia
  * @author Bassirou Kane
  */
