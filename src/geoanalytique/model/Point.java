@@ -4,10 +4,10 @@ package geoanalytique.model;
  * Représente un point dans un plan cartésien.
  * Un point est défini par ses coordonnées (abscisse, ordonnée).
  * @author Abdallah Solofo Victor Aicha
- * @author Nana Cathy Aidara
- * @author Mohamed Cissoko
+ * @author Nana Katy Aidara
+ * @author Mohamed Cissokho
  * @author Fatimata Tidiane Dia
- * @author Bassirou Kane
+ * @author Bassirou Kane
  */
 public class Point extends GeoObject{
     protected float abscisse;
