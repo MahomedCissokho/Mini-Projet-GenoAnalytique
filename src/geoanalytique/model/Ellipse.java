@@ -3,7 +3,7 @@ package geoanalytique.model;
  * Représente une ellipse dans un plan cartésien.
  * Une ellipse est définie par ses demi-axes et son centre.
  * 
- * @author Abdallah Victor Assolofo Aicha
+ * @author Abdallah Solofo Victor Aicha
  * @author Nana Cathy Aidara
  * @author Mohamed Cissoko
  * @author Fatimata Tidiane Dia
