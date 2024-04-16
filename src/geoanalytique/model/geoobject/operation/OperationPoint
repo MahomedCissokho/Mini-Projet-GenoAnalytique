@@ -1,0 +1,76 @@
+package geoanalytique.model.geoobject.operation;
+import geoanalytique.model.Rectangle;
+import geoanalytique.util.Operation;
+/**
+ * La classe OperationRectangle contient les méthodes spécifiques aux opérations sur les rectangles.
+ * @author Abdallah Solofo Victor AICHA,Nana Katy AIDARA, Mahomed CISSOKHO, 
+ * Fatima Tidiane DIA, Bassirou KANE
+ */
+
+public class OperationPoint {
+    private double x;
+    private double y;
+
+    /**
+     * Constructeur de la classe Point.
+     * 
+     * @param x La coordonnée x du point.
+     * @param y La coordonnée y du point.
+     */
+    public Point(double x, double y) {
+        this.x = x;
+        this.y = y;
+}
+/**
+     * Déplace le point selon les valeurs de déplacement données.
+     * 
+     * @param deltaX La valeur de déplacement selon l'axe x.
+     * @param deltaY La valeur de déplacement selon l'axe y.
+     */
+    public void deplacerPoint(double deltaX, double deltaY) {
+        this.x += deltaX;
+        this.y += deltaY;
+    }
+
+    /**
+     * Calcule la distance entre ce point et un autre point donné.
+     * 
+     * @param autrePoint Le point avec lequel calculer la distance.
+     * @return La distance entre ce point et le point donné.
+     */
+    public double calculerDistance(Point autrePoint) {
+        double distanceX = autrePoint.x - this.x;
+        double distanceY = autrePoint.y - this.y;
+        return Math.sqrt(distanceX * distanceX + distanceY * distanceY);
+    }
+
+    /**
+     * Trouve le milieu entre ce point et un autre point donné.
+     * 
+     * @param autrePoint Le point avec lequel trouver le milieu.
+     * @return Le point représentant le milieu entre ce point et le point donné.
+     */
+    public Point trouverMilieu(Point autrePoint) {
+        double milieuX = (this.x + autrePoint.x) / 2;
+        double milieuY = (this.y + autrePoint.y) / 2;
+        return new Point(milieuX, milieuY);
+    }
+
+    /**
+     * Obtient la coordonnée x du point.
+     * 
+     * @return La coordonnée x du point.
+     */
+    public double getX() {
+        return x;
+    }
+
+    /**
+     * Obtient la coordonnée y du point.
+     * 
+     * @return La coordonnée y du point.
+     */
+    public double getY() {
+        return y;
+    }
+}

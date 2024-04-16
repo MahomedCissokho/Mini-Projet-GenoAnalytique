@@ -1,0 +1,64 @@
+package geoanalytique.model.geoobject.operation;
+
+import geoanalytique.model.Point;
+import geoanalytique.util.Operation;
+
+/**
+ * La classe TriangleIsocele représente un triangle isocèle dans un espace à deux dimensions.
+ * Elle permet de vérifier si deux côtés sont de longueurs égales,
+ * et calculer l'angle à la base du triangle isocèle
+ * 
+ * Cette classe est utilisée pour effectuer des opérations sur les triangles isocèles.
+ * 
+ * @author Abdallah Solofo Victor AICHA, Nana Katy AIDARA, Mahomed CISSOKHO,
+ *         Fatima Tidiane DIA, Bassirou KANE
+ */
+public class TriangleIsocele {
+    private Point sommet;
+    private Point base1;
+    private Point base2;
+
+    /**
+     * Constructeur de la classe TriangleIsocele à partir du sommet et des deux points de la base.
+     * 
+     * @param sommet Sommet du triangle isocèle.
+     * @param base1 Premier point de la base du triangle isocèle.
+     * @param base2 Deuxième point de la base du triangle isocèle.
+     */
+    public TriangleIsocele(Point sommet, Point base1, Point base2) {
+        this.sommet = sommet;
+        this.base1 = base1;
+        this.base2 = base2;
+    }
+
+    /**
+     * Vérifie si deux côtés du triangle sont de longueurs égales.
+     * 
+     * @return true si deux côtés sont égaux, false sinon.
+     */
+    public boolean verifierIsocele() {
+        double distanceSommetBase1 = sommet.calculerDistance(base1);
+        double distanceSommetBase2 = sommet.calculerDistance(base2);
+        return distanceSommetBase1 == distanceSommetBase2;
+    }
+
+    /**
+     * Calcule l'angle à la base du triangle isocèle.
+     * 
+     * @return L'angle à la base du triangle isocèle en degrés.
+     */
+    public double calculerAngleBase() {
+        // Pour simplifier, supposons que la base soit horizontale
+        // et calculons simplement la différence d'abscisse entre le sommet et les points de la base.
+        double distanceBase1Base2 = base1.calculerDistance(base2);
+        double distanceSommetBase1 = sommet.calculerDistance(base1);
+        double distanceSommetBase2 = sommet.calculerDistance(base2);
+        
+        // Utilisation de la formule de l'arc tangente pour calculer l'angle
+        double angleRadian = Math.atan2(distanceBase1Base2 / 2, distanceSommetBase1);
+        
+        // Conversion en degrés
+        return Math.toDegrees(angleRadian);
+    }
+
+}
