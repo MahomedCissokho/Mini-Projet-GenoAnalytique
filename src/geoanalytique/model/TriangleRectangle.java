@@ -5,11 +5,11 @@ package geoanalytique.model;
  * Un triangle rectangle est un triangle irrégulier ayant un angle droit.
  * Il hérite de la classe TriangleIrregulier.
  * 
- * @author Abdallah Victor Assolofo Aicha
- * @author Nana Cathy Aidara
- * @author Mohamed Cissoko
+ * @author Abdallah Solofo Victor Aicha
+ * @author Nana Katy Aidara
+ * @author Mohamed Cissokho
  * @author Fatimata Tidiane Dia
- * @author Bassirou Kane
+ * @author Bassirou Kane
  */
 public class TriangleRectangle extends TriangleIrregulier {
     // Pas d'attributs supplémentaires, car les côtés du triangle sont déjà définis dans TriangleIrregulier
