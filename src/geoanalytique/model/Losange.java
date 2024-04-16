@@ -5,7 +5,7 @@ package geoanalytique.model;
  * Un losange est défini par la longueur de ses côtés.
  * Il hérite de la classe Polygone.
  * 
- * @author Abdallah Victor Assolofo Aicha
+ * @author Abdallah Solofo Victor Aicha
  * @author Nana Cathy Aidara
  * @author Mohamed Cissoko
  * @author Fatimata Tidiane Dia
