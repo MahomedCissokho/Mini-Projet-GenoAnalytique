@@ -5,10 +5,10 @@ package geoanalytique.model;
  * Un cercle est défini par son rayon et son centre.
  * 
  * @author Abdallah Solofo Victor Aicha
- * @author Nana Cathy Aidara
- * @author Mohamed Cissoko
+ * @author Nana Katy Aidara
+ * @author Mohamed Cissokho
  * @author Fatimata Tidiane Dia
- * @author Bassirou Kane
+ * @author Bassirou Kane
  */
 public class Cercle extends Ellipse {
     protected float rayon;
