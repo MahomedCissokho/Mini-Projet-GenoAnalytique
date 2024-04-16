@@ -4,7 +4,7 @@ package geoanalytique.model;
  * Représente un carré dans un plan cartésien.
  * Un carré est défini par la longueur de ses côtés, tous égaux.
  * 
- * @author Abdallah Victor Assolofo Aicha
+ * @author Abdallah Solofo Victor Aicha
  * @author Nana Cathy Aidara
  * @author Mohamed Cissoko
  * @author Fatimata Tidiane Dia
