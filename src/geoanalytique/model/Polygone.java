@@ -5,10 +5,10 @@ import java.util.List;
  * Un polygone est défini par un nombre de côtés et une liste de sommets.
  * Cette classe est abstraite et sert de classe de base pour d'autres polygones spécifiques.
  * @author Abdallah Solofo Victor Aicha
- * @author Nana Cathy Aidara
- * @author Mohamed Cissoko
+ * @author Nana Katy Aidara
+ * @author Mohamed Cissokho
  * @author Fatimata Tidiane Dia
- * @author Bassirou Kane
+ * @author Bassirou Kane
  */
 public abstract class Polygone extends Surface {
     protected int nombre_cote;
