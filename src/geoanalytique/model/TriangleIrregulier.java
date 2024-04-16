@@ -5,11 +5,11 @@ package geoanalytique.model;
  * Un triangle irrégulier est défini par les longueurs de ses côtés.
  * Il hérite de la classe Polygone.
  * 
- * @author Abdallah Victor Assolofo Aicha
- * @author Nana Cathy Aidara
- * @author Mohamed Cissoko
+ * @author Abdallah Solofo Victor Aicha
+ * @author Nana Katy Aidara
+ * @author Mohamed Cissokho
  * @author Fatimata Tidiane Dia
- * @author Bassirou Kane
+ * @author Bassirou Kane
  */
 public class TriangleIrregulier extends Polygone {
     protected float longueur_cote1;
